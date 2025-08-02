@@ -1,0 +1,41 @@
+[
+  {
+    "Id": 1,
+    "Country": "JAPAN",
+    "Destination": "Mount Fuji",
+    "Img": {
+      "url": "https://scrimba.com/links/travel-journal-japan-image-url",
+      "alt": "Mount Fuji"
+    },
+
+    "Link": "https://maps.app.goo.gl/6RLYZDuuuqJ7kNGZ9",
+    "StartDate": "12 Jan, 2023",
+    "EndDate": "24 Jan, 2023",
+    "Text": "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+  },
+  {
+    "Id": 2,
+    "Country": "AUSTRALIA",
+    "Destination": "Sydney Opera House",
+    "Img": {
+      "url": "https://scrimba.com/links/travel-journal-australia-image-url",
+      "alt": "Sydney Opera House"
+    },
+    "StartDate": "27 May, 2023",
+    "EndDate": "8 Jun, 2023",
+    "Text": "The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings."
+  },
+  {
+    "Id": 3,
+    "Country": "NORWAY",
+    "Destination": "Geirangerfjord",
+    "Img": {
+      "url": "https://scrimba.com/links/travel-journal-norway-image-url",
+      "alt": "Geirangerfjord"
+    },
+    "Link": "https://maps.app.goo.gl/fhkJuBhmFDv47tiB7",
+    "StartDate": "01 Oct, 2024",
+    "EndDate": "18 Nov, 2024",
+    "Text": "The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality."
+  }
+]

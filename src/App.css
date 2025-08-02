@@ -17,6 +17,46 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/*Entry Styles*/
+
+article.myentry {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom:60px;
+}
+
+    .myentry span {
+        letter-spacing: 3px;
+        margin-inline-end: 15px;
+    }
+
+    .myentry h1 {
+        margin-block-start: 0em;
+        margin-block-end: 0.2em;
+        line-height: 1em;
+    }
+
+.marker-logo {
+    margin-inline-end: 10px;
+    height: 20px;
+}
+
+.main-image-container {
+    width: 220px;
+    height: 250px;
+   
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.main-image {
+    width: 220px;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/*header styles*/
 .myheader {
     background-color: #F55A5A;
     display: flex;
@@ -26,8 +66,9 @@
     height: 60px;
 }
 
-h1 {
-    font-size: 1em;
-    line-height: 1.1;
-    font-weight:normal;
-}
+    .myheader h1 {
+        font-size: 1em;
+        line-height: 1.1;
+        font-weight: normal;
+    }
+
