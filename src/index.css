@@ -23,12 +23,13 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  /*place-items: center;*/
-  min-width: 320px;
-  min-height: 100vh;
-  font-family:Inter;
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 h1 {
