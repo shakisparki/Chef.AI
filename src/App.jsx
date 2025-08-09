@@ -1,5 +1,5 @@
 import Header from "./Components/Header"
-import Main from "./Components/Main"
+import Main from "./Components/MainContent"
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
         <Header />
-        <Main/>
+        <MainContent />
     </>
   )
 }

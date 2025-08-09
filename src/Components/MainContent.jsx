@@ -1,4 +1,4 @@
-export default function Main() {
+export default function MainContent() {
     const data = []
     var dataElements = data.map(x => <li key={x}> {x}</li>)
     function handleSubmit(event) {
