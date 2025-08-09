@@ -1,5 +1,7 @@
 import Header from "./Components/Header"
-import MainContent from "./Components/MainContent"
+import Home from "./Pages/Home"
+import About from "./Pages/About"
+import { Routes, Route } from "react-router-dom"
 import './App.css'
 
 function App() {
@@ -7,7 +9,12 @@ function App() {
   return (
     <>
         <Header />
-        <MainContent />
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/recipes" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<h1>404 - Page Not Found</h1>} />
+        </Routes>    
     </>
   )
 }

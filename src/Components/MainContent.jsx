@@ -1,22 +1,30 @@
+import {useState } from "react"
 export default function MainContent() {
-    const data = []
-    var dataElements = data.map(x => <li key={x}> {x}</li>)
+    const [data, setData] = useState([])
+    const dataElements = data.map(x =>
+        <li key={x}> {x}</li>)
     function handleSubmit(event) {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const ingredient = formData.get("ingredient")
-        data.push(ingredient)
+
+        if (!ingredient) { return }
+        setData(prev => [...prev, ingredient])
+        
+        var ingredFormm = document.getElementById("ingredientInput")
+        ingredFormm.value = ""
         console.log("Form Submitted:" + ingredient)
     }
     return (
         <main>
             <form className="add-ingredient-form" onSubmit={handleSubmit}>
-                <input type="text" placeholder="e.g pepper" aria-label="Add Ingredient" name="ingredient"/>
+                <input id="ingredientInput" type="text" placeholder="e.g pepper" aria-label="Add Ingredient" name="ingredient"/>
                 <button type="submit">Add Ingredient</button>
             </form>
             <h2> Ingredients </h2>
             <ul>
-                { dataElements }
+                { 
+                    dataElements }
             </ul>
             
         </main>
