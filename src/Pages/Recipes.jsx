@@ -44,7 +44,6 @@ export default function Recipes() {
             .then(() => console.log("chat sent to " + chatInput));
 
         setChatInput(""); //clear input
-        //ea.target.reset(); // clears the form
     }   
     return (
         <main>
