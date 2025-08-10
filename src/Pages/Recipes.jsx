@@ -26,6 +26,9 @@ export default function Recipes() {
             .then(() => console.log("Connection started"))
             .catch(err => console.error("Error while starting connection: ", err));
         console.log("Connection running");
+
+        return () =>
+            connection.stop()
     }, []);
 
     useEffect(() => {
