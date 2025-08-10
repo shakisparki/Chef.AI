@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { connection } from '../signalRService';
+import { connection } from '../signalRService'; 
 import * as signalR from '@microsoft/signalr';
 export default function Recipes() {
 
@@ -38,11 +38,10 @@ export default function Recipes() {
             console.error("Connection is not yet established.");
             return;
         }
-        connection.invoke("SendMessage", "User1", text) // Replace "User1" with the actual user identifier)
+        connection.invoke("SendMessage", "React Client", text) // Replace "User1" with the actual user identifier)
             .then(() => console.log("chat sent to " + text));
 
-        var chatinput = document.getElementById("chatinput")
-        chatinput.value = ""
+        ea.target.reset(); // clears the form
     }   
     return (
         <main>
