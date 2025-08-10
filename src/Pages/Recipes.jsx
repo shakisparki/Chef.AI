@@ -5,7 +5,10 @@ import * as signalR from '@microsoft/signalr';
 export default function Recipes() {
 
     const [chatHistory, setChatHistory] = useState([]);
-    const chatElements = chatHistory.map((message, index) => (<li key={index}> {message}</li>));
+    const [chatInput, setChatInput] = useState("");
+    const chatElements = chatHistory.map(
+        (message, index) =>
+            (<li key={index}> {message}</li>));
 
     useEffect(() => {
         // setup signal R connection
@@ -31,17 +34,17 @@ export default function Recipes() {
     }, []);
     function handleSubmit(ea) {
         ea.preventDefault();
-        var formData = new FormData(ea.currentTarget);
-        var text = formData.get("chatinput");
-        if (!text) { return }
+
+        if (!chatInput) { return }
         if (connection.state !== signalR.HubConnectionState.Connected) {
             console.error("Connection is not yet established.");
             return;
         }
-        connection.invoke("SendMessage", "React Client", text) // Replace "User1" with the actual user identifier)
-            .then(() => console.log("chat sent to " + text));
+        connection.invoke("SendMessage", "React Client", chatInput) // Replace "User1" with the actual user identifier)
+            .then(() => console.log("chat sent to " + chatInput));
 
-        ea.target.reset(); // clears the form
+        setChatInput(""); //clear input
+        //ea.target.reset(); // clears the form
     }   
     return (
         <main>
@@ -52,7 +55,9 @@ export default function Recipes() {
                 </ul>
             </div>
             <form onSubmit={handleSubmit} className="add-ingredient-form">
-                <input id="chatinput" type="text" placeholder="Enter text into chat" aria-label="Chat about Recipes" name="chatinput"/>
+                <input id="chatinput" type="text" placeholder="Enter text into chat" aria-label="Chat about Recipes"
+                    name="chatinput" value={chatInput} onChange={(e) => setChatInput(e.target.value)}
+/>
                 <button type="submit">Send</button>
             </form>
             
