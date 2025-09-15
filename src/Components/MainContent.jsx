@@ -1,15 +1,31 @@
-import {useState } from "react"
+import { useState } from "react"
+import Ingredients from "./Ingredients"
 export default function MainContent() {
-    const [data, setData] = useState([])
-    const dataElements = data.map(x =>
-        <li key={x}> {x}</li>)
+    const [data, setData] = useState(["all the main spices", "pasta", "ground beef", "tomato paste"])
+
     function addIngredient(formData) {
         const ingredient = formData.get("ingredient")
+        if (!ingredient) { return }
 
-        if (!ingredient || ingredient.trim().length == 0) { return }
-        setData(prev => [...prev, ingredient.trim()])
+        let value = ingredient.trim().toLowerCase();
+        if (value.length == 0 || data.includes(value)) { return }
+        setData(prev => [...prev, value])
 
         console.log("Form Submitted:" + ingredient)
+    }
+
+    function displayIngredients() {
+        return data.length > 0 && <Ingredients items={data} />
+    }
+
+    function displayCreateRecipe() {
+        return data.length > 2 && (<div className="recipeFooter">
+            <div>
+                <h2> Ready for a recipe? </h2>
+                <p >Generate a recipe from your list of ingredients</p>
+            </div>           
+            <button>Get a recipe</button>
+        </div>)
     }
     return (
         <main>
@@ -17,11 +33,10 @@ export default function MainContent() {
                 <input type="text" placeholder="e.g pepper" aria-label="Add Ingredient" name="ingredient"/>
                 <button>Add Ingredient</button>
             </form>
-            <h2> Ingredients </h2>
-            <ul>
-                { dataElements }
-            </ul>
-            
+
+            {displayIngredients()}
+
+            {displayCreateRecipe()}
         </main>
     )
 }
