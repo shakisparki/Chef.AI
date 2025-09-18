@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Ingredients from "./Ingredients"
 export default function MainContent() {
-    const [data, setData] = useState(["all the main spices", "pasta", "ground beef", "tomato paste"])
+    const [data, setData] = useState([])
 
     function addIngredient(formData) {
         const ingredient = formData.get("ingredient")

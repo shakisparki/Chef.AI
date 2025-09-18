@@ -1,14 +1,14 @@
 export default function About() {
     return (
         <main>
-            <h2>About Chef Claude</h2>
+            <h2>About Chef.AI</h2>
             <p>
-                Chef Claude is a culinary AI designed to help you discover and create delicious recipes.
-                Whether you're a beginner or an experienced cook, Chef Claude can assist you in finding the perfect dish for any occasion.
+                Chef.AI is a culinary AI designed to help you discover and create delicious recipes.
+                Whether you're a beginner or an experienced cook, Chef.AI can assist you in finding the perfect dish for any occasion.
             </p>
             <p>
-                With a vast database of recipes, Chef Claude can suggest meals based on your preferences, dietary restrictions, and available ingredients.
-                From appetizers to desserts, Chef Claude is here to make cooking enjoyable and accessible for everyone.
+                With a vast database of recipes, Chef.AI can suggest meals based on your preferences, dietary restrictions, and available ingredients.
+                From appetizers to desserts, Chef.AI is here to make cooking enjoyable and accessible for everyone.
             </p>
         </main>
     )
