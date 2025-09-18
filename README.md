@@ -6,6 +6,8 @@ Whether you're a beginner or an experienced cook, Chef.AI can assist you in find
 With a vast database of recipes, Chef.AI can suggest meals based on your preferences, dietary restrictions, and available ingredients.
 From appetizers to desserts, Chef.AI is here to make cooking enjoyable and accessible for everyone.
 
+## Run/Test
+Visit https://thechefai.netlify.app/ to use Chef.AI online.
 
 ## Development
 
