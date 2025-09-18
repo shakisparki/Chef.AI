@@ -1,12 +1,12 @@
-# React + Vite
+# Chef.AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chef.AI is a culinary AI designed to help you discover and create delicious recipes.
+Whether you're a beginner or an experienced cook, Chef.AI can assist you in finding the perfect dish for any occasion.
 
-Currently, two official plugins are available:
+With a vast database of recipes, Chef.AI can suggest meals based on your preferences, dietary restrictions, and available ingredients.
+From appetizers to desserts, Chef.AI is here to make cooking enjoyable and accessible for everyone.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Chef.AI is built with React + JavaScript, and uses free AI models on HuggingFace to get recipe suggestions.
