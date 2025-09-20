@@ -1,10 +1,17 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Ingredients from "./Ingredients"
 import RecipeResponse from "./RecipeResponse"
 import { getRecipeFromMistral } from "../Services/ai"
 export default function MainContent() {
     const [data, setData] = useState([])
     const [recipe, setRecipe] = useState("")
+    const recipeSectionRef = useRef(null)
+
+    useEffect(() => {
+        if (recipe !== "" && recipeSectionRef.current !== null) {
+            recipeSectionRef.current.scrollIntoView({ behavior: "smooth" })
+        }
+    }, [recipe])
 
     function addIngredient(formData) {
         const ingredient = formData.get("ingredient")
@@ -20,7 +27,7 @@ export default function MainContent() {
     }
 
     function displayCreateRecipe() {
-        return data.length > 2 && (<div className="recipeFooter">
+        return data.length > 2 && (<div className="recipeFooter" ref={recipeSectionRef}>
             <div>
                 <h2> Ready for a recipe? </h2>
                 <p >Generate a recipe from your list of ingredients</p>
@@ -31,6 +38,7 @@ export default function MainContent() {
 
     async function getRecipe() {
         // Call AI service to get recipe
+        setRecipe("Loading...")
         const recipeMarkdown = await getRecipeFromMistral(data)
         setRecipe(recipeMarkdown)
     }
