@@ -54,7 +54,9 @@ body main {
 
 header {
     display: flex;
-    height: 211px;
+    flex-flow: wrap;
+    
+    min-height: 200px;
     justify-content: center;
     align-items: center;
     background-color: white;
@@ -66,6 +68,10 @@ header {
         color:black;
         font-weight:300;
         font-size: 4em;
+    }
+
+    header nav ul{
+        list-style:none;
     }
 
 .add-ingredient-form {
