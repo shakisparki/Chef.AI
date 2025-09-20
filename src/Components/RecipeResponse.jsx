@@ -1,10 +1,10 @@
-
+import ReactMarkdown from 'react-markdown'
 export default function RecipeResponse({ recipe }) {
     console.log("rendering with" + recipe)
     return (
-        <section>
+        <section className="suggested-recipe-container" aria-live="polite">
             <h2>Your Recipe</h2>
-            <p>{recipe}</p>
+            <ReactMarkdown children={recipe} />
         </section>
     )
 }
