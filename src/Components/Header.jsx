@@ -3,8 +3,11 @@ import NavMenu from "./NavMenu"
 export default function Header() {
     return (
         <header>
-            <img src={claudeIcon} alt="Chef.AI"/>
-            <h1>Chef.AI</h1>
+            <a href="/" className="logoTitle">
+                <img src={claudeIcon} alt="Chef.AI" />
+                <h1>Chef.AI</h1>
+            </a>
+            
             <NavMenu />
         </header>
     )
