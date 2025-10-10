@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7e6c0e4a-c3b2-4cd6-bbf2-d010c85afed4/deploy-status)](https://app.netlify.com/projects/thechefai/deploys)
 # Chef.AI
 
 Chef.AI is a culinary AI designed to help you discover and create delicious recipes.
